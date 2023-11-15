@@ -1,7 +1,14 @@
+<div class="flex justify-center bg-slate-800 min-h-screen items-center">
+<div class="bg-slate-200 rounded-lg p-4 shadow-xl max-h-96 my-4">
+
 <% if user_signed_in? %> 
- <div> Welcome <%= current_user.email %> </div> 
-  <%= button_to "Sign out", destroy_user_session_path, method: :delete %> 
+ <div class="text-slate-800"> Welcome <%= current_user.email %> </div> 
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete,class:"bg-slate-800 p-2 rounded-lg text-white my-2" %> 
 <% else %>
-  <%= button_to "Sign in", new_user_session_path %> 
+  <%= button_to "Sign in", new_user_session_path,class:"bg-slate-800 p-2 rounded-lg text-white my-2" %> 
 <% end %>
-<h1>Hello Home Page!</h1>
+<div class="flex justify-center my-2">
+<h1 class="text-xl">Hello Home Page!</h1>
+</div>
+</div>
+</div>
