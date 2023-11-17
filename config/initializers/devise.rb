@@ -14,6 +14,7 @@ Devise.setup do |config|
   config.maximum_attempts = 5
   config.unlock_in = 1.hour
   config.timeout_in = 30.minutes
+  config.omniauth :github, ENV['APP_ID'], ENV['APP_SECRET'], scope: 'user,public_repo'
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
